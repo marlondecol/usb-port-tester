@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name USB_Port_Tester)(type KiCad)(uri ${KIPRJMOD}/Modules/USB_Port_Tester.pretty)(options "")(descr "Footprints used in this project"))
+  (lib (name USB_Port_Tester_Symbol)(type KiCad)(uri ${KIPRJMOD}/Modules/USB_Port_Tester_Symbol.pretty)(options "")(descr "Symbols and graphics used on this project board"))
+)

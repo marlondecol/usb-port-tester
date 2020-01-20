@@ -1,0 +1,197 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "USB Port Tester"
+Date "2020-01-19"
+Rev "1"
+Comp "Designed by Marlon L. C."
+Comment1 "github.com/mlc2307"
+Comment2 ""
+Comment3 "Proudly developed in Brazil"
+Comment4 "GNU General Public License v3"
+$EndDescr
+$Comp
+L Device:LED_ALT D2
+U 1 1 5E21147D
+P 6850 3800
+F 0 "D2" V 6900 3700 50  0000 R CNN
+F 1 "BLUE" V 6800 3700 50  0000 R CNN
+F 2 "LED_SMD:LED_0805_2012Metric" H 6850 3800 50  0001 C CNN
+F 3 "~" H 6850 3800 50  0001 C CNN
+	1    6850 3800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED_ALT D3
+U 1 1 5E212798
+P 7250 3800
+F 0 "D3" V 7200 3900 50  0000 L CNN
+F 1 "RED" V 7300 3900 50  0000 L CNN
+F 2 "LED_SMD:LED_0805_2012Metric" H 7250 3800 50  0001 C CNN
+F 3 "~" H 7250 3800 50  0001 C CNN
+	1    7250 3800
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5E215432
+P 7050 4200
+F 0 "R2" H 7100 4250 50  0000 L CNN
+F 1 "220R" H 7100 4150 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 6980 4200 50  0001 C CNN
+F 3 "~" H 7050 4200 50  0001 C CNN
+	1    7050 4200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6850 3950 6850 4000
+Wire Wire Line
+	6850 4000 7050 4000
+Wire Wire Line
+	7250 4000 7250 3950
+Wire Wire Line
+	7050 4050 7050 4000
+Connection ~ 7050 4000
+Wire Wire Line
+	7050 4000 7250 4000
+$Comp
+L power:GND #PWR02
+U 1 1 5E22A8F9
+P 7050 4350
+F 0 "#PWR02" H 7050 4100 50  0001 C CNN
+F 1 "GND" H 7050 4200 50  0000 C CNN
+F 2 "" H 7050 4350 50  0001 C CNN
+F 3 "" H 7050 4350 50  0001 C CNN
+	1    7050 4350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7250 3600 7250 3650
+Wire Wire Line
+	6850 3650 6850 3600
+$Comp
+L power:PWR_FLAG #FLG01
+U 1 1 5E22ED97
+P 5100 4400
+F 0 "#FLG01" H 5100 4475 50  0001 C CNN
+F 1 "PWR_FLAG" V 5100 4500 50  0000 L CNN
+F 2 "" H 5100 4400 50  0001 C CNN
+F 3 "~" H 5100 4400 50  0001 C CNN
+	1    5100 4400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5400 3600 6500 3600
+$Comp
+L power:PWR_FLAG #FLG02
+U 1 1 5E2329AB
+P 6500 3600
+F 0 "#FLG02" H 6500 3675 50  0001 C CNN
+F 1 "PWR_FLAG" H 6500 3750 50  0000 C CNN
+F 2 "" H 6500 3600 50  0001 C CNN
+F 3 "~" H 6500 3600 50  0001 C CNN
+	1    6500 3600
+	1    0    0    -1  
+$EndComp
+Wire Notes Line
+	6750 3550 6750 4600
+Wire Notes Line
+	6750 4600 7550 4600
+Wire Notes Line
+	7550 4600 7550 3550
+Wire Notes Line
+	7550 3550 6750 3550
+Text Notes 6750 3550 0    50   ~ 0
+POWER CHECK
+Wire Wire Line
+	6850 3600 7250 3600
+Text Label 5400 3600 0    50   ~ 0
+VBUS
+Text Label 5100 4200 3    50   ~ 0
+GND
+Text Label 7250 4000 2    50   ~ 0
+POWER
+$Comp
+L USB_Port_Tester:USB_A_Unshielded J1
+U 1 1 5E21AAE1
+P 5100 3800
+F 0 "J1" H 4900 4250 50  0000 L CNN
+F 1 "USB_CONN" H 4900 4150 50  0000 L CNN
+F 2 "USB_Port_Tester:USB_A_On_Trace" H 5250 3750 50  0001 C CNN
+F 3 "~" H 5250 3750 50  0001 C CNN
+	1    5100 3800
+	1    0    0    -1  
+$EndComp
+Text Label 5400 3800 0    50   ~ 0
+D+
+$Comp
+L Device:R R1
+U 1 1 5E22733D
+P 6250 3800
+F 0 "R1" V 6350 3800 50  0000 C CNN
+F 1 "220R" V 6450 3800 50  0000 C CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 6180 3800 50  0001 C CNN
+F 3 "~" H 6250 3800 50  0001 C CNN
+	1    6250 3800
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:LED_ALT D1
+U 1 1 5E227E5A
+P 5750 3800
+F 0 "D1" H 5750 3700 50  0000 C CNN
+F 1 "WHITE" H 5750 3600 50  0000 C CNN
+F 2 "LED_SMD:LED_0805_2012Metric" H 5750 3800 50  0001 C CNN
+F 3 "~" H 5750 3800 50  0001 C CNN
+	1    5750 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6400 3800 6500 3800
+Wire Wire Line
+	6500 3800 6500 3600
+Connection ~ 6500 3600
+Text Label 5900 3800 0    50   ~ 0
+DATA
+Wire Wire Line
+	5900 3800 6100 3800
+Wire Wire Line
+	5400 3800 5600 3800
+Wire Notes Line
+	5550 3700 5550 4050
+Wire Notes Line
+	5550 4050 6450 4050
+Wire Notes Line
+	6450 4050 6450 3700
+Wire Notes Line
+	6450 3700 5550 3700
+Text Notes 5550 3700 0    50   ~ 0
+DATA INFO
+Wire Wire Line
+	6500 3600 6850 3600
+Connection ~ 6850 3600
+$Comp
+L power:GND #PWR01
+U 1 1 5E21899E
+P 5100 4450
+F 0 "#PWR01" H 5100 4200 50  0001 C CNN
+F 1 "GND" H 5100 4300 50  0000 C CNN
+F 2 "" H 5100 4450 50  0001 C CNN
+F 3 "" H 5100 4450 50  0001 C CNN
+	1    5100 4450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5100 4200 5100 4400
+Connection ~ 5100 4400
+Wire Wire Line
+	5100 4400 5100 4450
+Text Label 5400 3900 0    50   ~ 0
+D-
+Wire Wire Line
+	5400 3900 5500 3900
+NoConn ~ 5500 3900
+$EndSCHEMATC
