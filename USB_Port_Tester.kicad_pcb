@@ -17,7 +17,7 @@
     (company "Designed by Marlon L. C.")
     (comment 1 github.com/mlc2307)
     (comment 3 "Proudly developed in Brazil")
-    (comment 4 "GNU General Public License v3")
+    (comment 4 "CERN Open Hardware Licence v1.2")
   )
 
   (layers
@@ -95,9 +95,9 @@
       (subtractmaskfromsilk false)
       (outputformat 1)
       (mirror false)
-      (drillshape 1)
+      (drillshape 0)
       (scaleselection 1)
-      (outputdirectory ""))
+      (outputdirectory "Gerber/"))
   )
 
   (net 0 "")
@@ -1796,7 +1796,7 @@
   (segment (start 143.8125 107.315) (end 147.6525 107.315) (width 0.15) (layer F.Cu) (net 6) (status 30))
   (segment (start 147.6525 111.125) (end 147.6525 107.315) (width 0.15) (layer F.Cu) (net 6) (status 30))
 
-  (zone (net 2) (net_name GND) (layer F.Cu) (tstamp 0) (hatch edge 0.508)
+  (zone (net 2) (net_name GND) (layer F.Cu) (tstamp 5E2549F2) (hatch edge 0.508)
     (connect_pads (clearance 0.2))
     (min_thickness 0.15)
     (fill yes (arc_segments 32) (thermal_gap 0.2) (thermal_bridge_width 0.2))

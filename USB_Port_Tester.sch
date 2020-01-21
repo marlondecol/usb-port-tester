@@ -11,7 +11,7 @@ Comp "Designed by Marlon L. C."
 Comment1 "github.com/mlc2307"
 Comment2 ""
 Comment3 "Proudly developed in Brazil"
-Comment4 "GNU General Public License v3"
+Comment4 "CERN Open Hardware Licence v1.2"
 $EndDescr
 $Comp
 L Device:LED_ALT D2
